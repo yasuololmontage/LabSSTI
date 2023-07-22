@@ -13,7 +13,7 @@
 ![exploit](/README%20image/image-3.png)
 - Đã có sự xuất hiện của flag.txt, giờ ta thực hiện cat file này sẽ có được flag:
 ![flag](/README%20image/image-4.png)
-- Như vậy. flag của lab là: KMA{3asy_tw1g_php_sst1_la6}
+- Như vậy, flag của lab là: KMA{3asy_tw1g_php_sst1_la6}
 ## Tổng kết:
 - Đây là một lab dính SSTI ở mức độ cơ bản cho ta biết được độ nguy hiểm khi cho thẳng biến `ID` vào bên trong template mà chưa qua kiểm duyệt. Để phòng tránh SSTI, ta cần phải gán vào template theo dạng tĩnh, đồng thời tiến hành kiểm tra và filter đầu vào của người dùng, ví dụ như sử dụng blacklist để lọc các ký tự không an toàn:
 ![black list](/README%20image/image-5.png)
