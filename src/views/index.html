@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Thế Giới Mèo</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="views/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="views/css/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="views/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="views/css/owl.theme.default.min.css">
+
+    <link href="views/css/templatemo-pod-talk.css" rel="stylesheet">
+
+    <!--
+
+TemplateMo 584 Pod Talk
+
+https://templatemo.com/tm-584-pod-talk
+
+-->
+</head>
+
+<body>
+
+    <main>
+
+
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12">
+                        <div class="text-center mb-5 pb-2">
+                            <h1 class="text-white">Thế Giới Mèo</h1>
+
+                            <p class="text-white">Cats are everywhere. Explore your favourite cats.</p>
+                        </div>
+
+                        <div class="owl-carousel owl-theme">
+                            {% for meo in meoArray %}
+                            <div class="owl-carousel-info-wrap item">
+                                <img src="{{ meo.link }}"
+                                    class="owl-carousel-image img-fluid" alt="" style="width: 300px;height: 300px; object-fit: cover;">
+
+                                <div class="owl-carousel-info">
+                                    <h4 class="mb-2">
+                                        {{ meo.name }}
+                                    </h4>
+                                    <a class="badge" href="?ID={{ meo.name }}">Xem thêm</a>
+                                </div>
+
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+
+    
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="views/js/jquery.min.js"></script>
+    <script src="views/js/bootstrap.bundle.min.js"></script>
+    <script src="views/js/owl.carousel.min.js"></script>
+    <script src="views/js/custom.js"></script>
+
+</body>
+
+</html>
