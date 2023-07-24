@@ -17,6 +17,8 @@ COPY config/supervisord.conf /etc/supervisord.conf
 
 COPY config/nginx.conf /etc/nginx/nginx.conf
 
+COPY flag.txt /
+
 RUN chown -R www-data:www-data /var/lib/nginx
 
 CMD /usr/bin/supervisord -c /etc/supervisord.conf
