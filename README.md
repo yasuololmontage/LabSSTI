@@ -1,5 +1,8 @@
 # Lab SSTI
 ## Giới thiệu:
+- Đây là lab chứa lỗ hổng SSTI mà em và người đóng góp chủ yếu là [Âu Quang Đức](https://github.com/Twil4) thực hiện nhằm để luyện tập khai thác lỗ hổng này và là tư liệu để em phát triển các trang web khác không bị dính phải lỗ hổng SSTI tương tự như thế này
+- Trang web này sử dụng ngôn ngữ PHP, HTML, CSS, JavaScript, Twig template và Dockerfile để chạy trên local
+## Tính năng: 
 - Đây là một trang web đơn giản chứa hình ảnh mèo và chức năng xem thêm nếu muốn biết thêm thông tin chi tiết về mèo con:
 ![](https://hackmd.io/_uploads/SJ4MYh_92.png)
 - Khi ấn vào xem thêm thì trang web sẽ hiện ra ảnh full đồng thời một vài mô tả về hình mèo đó:
@@ -15,8 +18,7 @@ COPY flag.txt /
 - Đã có sự xuất hiện của flag.txt, giờ ta thực hiện `car /flag.txt` để đọc nội dung và lấy flag:
 ![](https://hackmd.io/_uploads/S1zsQnh52.png)
 - Như vậy, flag của lab là: **KMA{3asy_tw1g_php_sst1_la6}**
-#### Tổng kết:
 ## Tổng kết:
 - Đây là một lab dính SSTI ở mức độ cơ bản cho ta biết được độ nguy hiểm khi cho thẳng biến `ID` vào bên trong template mà chưa qua kiểm duyệt. Để phòng tránh SSTI, ta cần phải gán vào template theo dạng tĩnh, đồng thời tiến hành kiểm tra và filter đầu vào của người dùng, ví dụ như sử dụng blacklist để lọc các ký tự không an toàn:
-![black list](/README%20image/image-5.png)
+![](https://hackmd.io/_uploads/r1o_t2u93.png)
 - Lưu ý mỗi template sẽ có cách khai thác khác nhau, nên hãy chú ý và blacklist những ký tự đặc biệt tương ứng với template mà ta sử dụng.
