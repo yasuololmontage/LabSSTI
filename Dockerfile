@@ -1,4 +1,4 @@
-FROM php:fpm-alpine
+FROM php:8.4.7RC1-fpm-alpine3.21
 
 RUN apk add --update --no-cache supervisor nginx \
     && rm -rf /tmp/* 
